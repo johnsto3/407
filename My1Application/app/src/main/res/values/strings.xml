@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My Text Adventure</string>
+    <string name="edit_message">Edit</string>
+    <string name="door">Door</string>
+    <string name="closet">Closet</string>
+    <string name="urn">Urn</string>
+    <string name="window">Window</string>
+    <string name="getstart">Welcome to Mitchell\'s Text Adventure!\n Please press start to begin!</string>
+    <string name="Start">Start</string>
+    <string name="button_send">Placeholder</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_display_message">My Message</string>
+
+    <string name="room1">You are trapped in some sort of dark room… There is a door on your left, some sort of urn in the corner, a closet, and a window.\nWhat will you do?</string>
+    <string name="doornokey">The door seems to be locked… Perhaps there is a key nearby?</string>
+    <string name="doorkey">You insert the key and turn it. The door becomes unlocked, and you proceed to the next room. Oddly, the key vanishes into thin air…</string>
+    <string name="closetb">Though it looked promising, the closet doesn\'t contain anything of note. In fact, it seems there is nothing at all inside.</string>
+    <string name="windowb">You look out of the window, but it\'s pitch black outside.</string>
+    <string name="urnnokey">You shake the urn and hear something moving within. You then turn the urn upside down, and a key falls out.</string>
+    <string name="urnkey">You already checked the urn.</string>
+
+
+
+
+
+
+
+
+</resources>
