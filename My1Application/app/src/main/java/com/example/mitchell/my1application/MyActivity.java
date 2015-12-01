@@ -32,10 +32,41 @@ public class MyActivity extends AppCompatActivity {
         Button b2 = (Button) findViewById(R.id.button2);
         Button b3 = (Button) findViewById(R.id.button3);
         Button b4 = (Button) findViewById(R.id.button4);
-        if (b1s.equals("doorkey")) {
-            text.setText(getString(R.string.doorkey));
-            //put new buttons here
 
+        if (b1s.equals("r3door")) {
+            if (b2s.equals("rb1")&&b3s.equals("bb1")&&b4s.equals("gb0")){
+                text.setText(getString(R.string.r3doorpass));
+            }
+            else
+                text.setText(getString(R.string.r3doorfail));
+        }
+
+        if (b1s.equals("hall")) {
+            text.setText(getString(R.string.room3));
+            //update buttons and strings
+            b1.setText("door");
+            b2.setText("red");
+            b3.setText("blue");
+            b4.setText("green");
+            b1s ="r3door";
+            b2s ="rb0";
+            b1s ="bb0";
+            b1s ="gb0";
+            return;
+        }
+
+        if (b1s.equals("doorkey")) {
+            text.setText(getString(R.string.doorkey)+ "\n" + getString(R.string.room2));
+            //put new buttons here
+            b1s = "hall";
+            b2s = "window";
+            b3s = "button";
+            b4s = "painting";
+            b1.setText(R.string.r2b1);
+            b2.setText(R.string.r2b2);
+            b3.setText(R.string.r2b3);
+            b4.setText(R.string.r2b4);
+            return;
         }
         if (b1s.equals("doornokey")) {
             text.setText(getString(R.string.doornokey));
@@ -61,6 +92,21 @@ public class MyActivity extends AppCompatActivity {
         Button b2 = (Button) findViewById(R.id.button2);
         Button b3 = (Button) findViewById(R.id.button3);
         Button b4 = (Button) findViewById(R.id.button4);
+        if (b2s.equals("rb0")) {
+            text.setText(getString(R.string.r3r0));
+            b2s="rb1";
+            return;
+        }
+        if (b2s.equals("rb1")) {
+            text.setText(getString(R.string.r3r1));
+            b2s="rb0";
+            return;
+        }
+
+
+        if (b2s.equals("window")) {
+            text.setText(getString(R.string.r2window));
+        }
         if (b2s.equals("closet")) {
             text.setText(getString(R.string.closetb));
         }
@@ -76,6 +122,22 @@ public class MyActivity extends AppCompatActivity {
         Button b2 = (Button) findViewById(R.id.button2);
         Button b3 = (Button) findViewById(R.id.button3);
         Button b4 = (Button) findViewById(R.id.button4);
+
+        if (b3s.equals("bb0")) {
+            text.setText(getString(R.string.r3b0));
+            b3s="bb1";
+            return;
+        }
+        if (b3s.equals("bb1")) {
+            text.setText(getString(R.string.r3b1));
+            b3s="bb0";
+            return;
+        }
+
+        if (b3s.equals("button")) {
+            text.setText(getString(R.string.r2button));
+        }
+
         if (b3s.equals("window")) {
             text.setText(getString(R.string.windowb));
         }
@@ -91,6 +153,23 @@ public class MyActivity extends AppCompatActivity {
         Button b2 = (Button) findViewById(R.id.button2);
         Button b3 = (Button) findViewById(R.id.button3);
         Button b4 = (Button) findViewById(R.id.button4);
+
+        if (b4s.equals("gb0")) {
+            text.setText(getString(R.string.r3g0));
+            b4s="gb1";
+            return;
+        }
+        if (b4s.equals("gb1")) {
+            text.setText(getString(R.string.r3g1));
+            b4s="gb0";
+            return;
+        }
+
+
+        if (b4s.equals("painting")) {
+            text.setText(getString(R.string.r2painting));
+        }
+
 
         if (b4s.equals("urnnokey")) {
             text.setText(getString(R.string.urnnokey));

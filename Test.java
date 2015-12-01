@@ -8,19 +8,136 @@ import java.util.Scanner;
 
 public class Test {
 	
-	public static void End(){
+	public static void End(Scanner scan){
 		System.out.println("You've reached the end of the current version. Make sure to check if there are updates!");
+		scan.close();
 	}
 	public static String check(String inp){
 		String fin = inp.toLowerCase();
 		return fin;
 	}
 	
-	public static void Room1(){
+	public static void Room3(Scanner scan){
+		System.out.println("You proceed down the hall, and find a strange room with 3 buttons, red, green, and blue, and a large door. \nWhat will you do?");
+		
+		//Scanner scan = new Scanner(System.in);
+		String ch;
+		int done = 0;
+		int ron = 0;
+		int bon = 0;
+		int gon = 0;
+		
+		//input handling goes here
+		while (done == 0){
+			ch = scan.nextLine();
+			ch = check(ch);
+			if(ch.equals("help")){
+				System.out.println("You can perform these actions here:");
+				System.out.println("door, red, green, blue");
+			}
+			else if (ch.equals("door")){
+					if (ron == 1 && bon == 1 && gon == 0){
+						System.out.println("You manage to open the door...");
+						done = 1;
+					}
+					else
+						System.out.println("The door refuses to open.");
+					
+			}
+		
+			else if (ch.equals("red")){
+				if (ron == 0){
+					System.out.println("You press the red button, causing it to light up.");
+					ron = 1;
+				}
+				else{
+					System.out.println("You press the red button again, shutting its light off.");
+					ron = 0;
+				}
+			}
+			else if (ch.equals("blue")){
+				if (bon == 0){
+					System.out.println("You press the blue button, causing it to light up.");
+					bon = 1;
+				}
+				else{
+					System.out.println("You press the blue button again, shutting its light off.");
+					bon = 0;
+				}
+			}
+			else if (ch.equals("green")){
+				if (gon == 0){
+					System.out.println("You press the green button, causing it to light up.");
+					gon = 1;
+				}
+				else{
+					System.out.println("You press the green button again, shutting its light off.");
+					gon = 0;
+				}
+				
+			}
+			else{
+				System.out.println("Invalid Input");
+				}
+			}
+			
+			//switch this to room 3 later
+			//scan.close();
+			End(scan);
+		}
+	
+	
+	public static void Room2(Scanner scan){
+		System.out.println("You are now in a somewhat lit hallway… There is a painting on the wall, another window, and some kind of button. \nWhat will you do?");
+		
+		//Scanner scan = new Scanner(System.in);
+		String ch;
+		int done = 0;
+		
+		//input handling goes here
+		while (done == 0){
+			ch = scan.nextLine();
+			ch = check(ch);
+			if(ch.equals("help")){
+				System.out.println("You can perform these actions here:");
+				System.out.println("hallway, window, button, painting");
+			}
+			else if (ch.equals("hallway")){
+					System.out.println("You continue further down the hall.");
+					done = 1;
+			}
+		
+			else if (ch.equals("window")){
+				System.out.println("Looking out the window, you can faintly see a courtyard. Nothing else of note.");
+			}
+			else if (ch.equals("button")){
+				System.out.println("You investigate the button, but it's old and rusted. Pressing it has no result.");
+			}
+			else if (ch.equals("painting")){
+					System.out.println("The painting is just a plain picture of a meadow. Curious, you remove it from the wall.\nBehind it is a note that says \"r1b1g0\". Perhaps you should note this down.");
+				
+			}
+			else{
+				System.out.println("Invalid Input");
+				}
+			}
+			
+			//switch this to room 3 later
+			//scan.close();
+			Room3(scan);
+		}
+	
+	
+	
+	
+	
+	
+	
+	public static void Room1(Scanner scan){
 		System.out.println("You are trapped in some sort of dark room...");
 		System.out.println("There is a door on your left, some sort of urn in the corner, a closet, and a window.");
 		System.out.println("What will you do?");
-		Scanner scan = new Scanner(System.in);
+		//Scanner scan = new Scanner(System.in);
 		String ch;
 		int done = 0;
 		int key = 0;
@@ -67,7 +184,8 @@ public class Test {
 			}
 			
 			//switch this to room 2 later
-			End();
+			//scan.close();
+			Room2(scan);
 		}
 	
 	
@@ -99,8 +217,9 @@ public class Test {
 			else
 				System.out.println("Invalid Input");
 		}
-		Room1();
-		scan.close();
+		//scan.close();
+		Room1(scan);
+		//scan.close();
 		
 		
 	

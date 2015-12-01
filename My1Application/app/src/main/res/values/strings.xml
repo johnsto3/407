@@ -5,6 +5,13 @@
     <string name="closet">Closet</string>
     <string name="urn">Urn</string>
     <string name="window">Window</string>
+    <string name="r2b1">Proceed</string>
+    <string name="r2b2">Window</string>
+    <string name="r2b3">Button</string>
+    <string name="r2b4">Painting</string>
+
+
+
     <string name="getstart">Welcome to Mitchell\'s Text Adventure!\n Please press start to begin!</string>
     <string name="Start">Start</string>
     <string name="button_send">Placeholder</string>
@@ -20,11 +27,19 @@
     <string name="urnnokey">You shake the urn and hear something moving within. You then turn the urn upside down, and a key falls out.</string>
     <string name="urnkey">You already checked the urn.</string>
 
-
-
-
-
-
-
+    <string name="room2">You are now in a somewhat lit hallway… There is a painting on the wall, another window,\nand some kind of button. What will you do?</string>
+    <string name="r2hallway">You continue further down the hall.</string>
+    <string name="r2window">Looking out the window, you can faintly see a courtyard. Nothing else of note.</string>
+    <string name="r2button">You investigate the button, but it\'s old and rusted. Pressing it has no result.</string>
+    <string name="r2painting">The painting is just a plain picture of a meadow. Curious, you remove it from the wall.\nBehind it is a note that says \"r1b1g0\". Perhaps you should note this down.</string>
+    <string name ="room3">You proceed down the hall, and find a strange room with 3 buttons, red, green, and blue, and a large door.</string>
+    <string name="r3doorfail">The door refuses to open.</string>
+    <string name="r3doorpass">You manage to open the door...</string>
+    <string name="r3r0">You press the red button, causing it to light up.</string>
+    <string name="r3r1">You press the red button again, shutting its light off.</string>
+    <string name="r3b0">You press the blue button, causing it to light up.</string>
+    <string name="r3b1">You press the blue button again, shutting its light off.</string>
+    <string name="r3g0">You press the green button, causing it to light up.</string>
+    <string name="r3g1">You press the green button again, shutting its light off.</string>
 
 </resources>
